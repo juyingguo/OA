@@ -23,6 +23,7 @@ target/
 .idea
 *.iws
 *.iml
+OA.iml
 *.ipr
 
 ### JRebel ###
@@ -46,3 +47,4 @@ nbdist/
 !*/build/*.html
 !*/build/*.xml
 /.idea
+/*.iml
