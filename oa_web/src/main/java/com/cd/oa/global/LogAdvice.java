@@ -24,7 +24,7 @@ public class LogAdvice {
     @Autowired
     private LogService logService;
 
-    @AfterReturning(value = "login()||changePassword()")
+    @AfterReturning(value = "login()||changePassword()||update()")
     public void operationLog(JoinPoint joinPoint){
         HttpSession session = (HttpSession) joinPoint.getArgs()[0];
 //        RequestAttributes requestAttributes = RequestContextHolder.getRequestAttributes();
@@ -45,6 +45,7 @@ public class LogAdvice {
     @Pointcut(value = "execution(* com.cd.oa.controller.GlobalController.changePassword(..))")
     private void changePassword(){}
 
-
+    @Pointcut(value = "execution(* com.cd.oa.controller.EmployeeController.update(..))")
+    private void update(){}
 
 }

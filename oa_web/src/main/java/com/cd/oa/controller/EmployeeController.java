@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpSession;
 import java.util.Map;
 
 @Controller("employeeController")
@@ -50,7 +51,7 @@ public class EmployeeController {
     }
 
     @RequestMapping("/update")
-    public String update(Employee employee){
+    public String update(HttpSession session,Employee employee){
         employeeService.edit(employee);
         return "redirect:/employee/list";
     }
