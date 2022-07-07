@@ -55,9 +55,10 @@
                     <div class="section row">
                         <c:forEach items="${records}" var="record">
                             <div class="col-md-1">${record.dealer.name}</div>
+<%--                            <div class="col-md-3"><spring:eval expression="record.dealTime"/></div>--%><%--时间显示，下午使用了12小时格式--%>
                             <div class="col-md-3"><spring:eval expression="record.dealTime"/></div>
                             <div class="col-md-1">${record.dealType}</div>
-                            <div class="col-md-2">${claimVoucher.status}</div>
+                            <div class="col-md-2">${record.dealResult}</div>
                             <div class="col-md-5">${record.comment}</div>
                         </c:forEach>
                     </div>

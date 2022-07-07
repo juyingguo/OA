@@ -17,6 +17,6 @@
     <properties>
         <!--spring版本-->
         <spring.version>4.3.23.RELEASE</spring.version>
+        <slf4j-log4j.version>1.7.5</slf4j-log4j.version>
     </properties>
-
 </project>

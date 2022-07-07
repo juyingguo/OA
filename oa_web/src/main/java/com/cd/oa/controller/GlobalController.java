@@ -29,6 +29,7 @@ public class GlobalController {
             return "redirect:to_login";
         }
         session.setAttribute("employee",employee);
+        System.out.println("login success.");
         return "redirect:self";
     }
 
