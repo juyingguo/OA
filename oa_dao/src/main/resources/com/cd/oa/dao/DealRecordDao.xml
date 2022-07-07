@@ -22,10 +22,10 @@
         values (#{claimVoucherId},#{dealId},#{dealTime},#{dealType},#{dealResult},#{comment})
     </insert>
 
-    <select id="selectByClaimVoucher" parameterType="DealRecord" resultMap="dealRecord">
-        select dr.*,d.name dname,d.post dpost from deal_record dr
-        left join employee d on (d.id=#{dr.claim_voucher_id})
-        where dr.claim_voucher_id=#{claim_voucher_id} order by deal_time
+    <select id="selectByClaimVoucher" parameterType="Integer" resultMap="dealRecord">
+        select dr.*,d.name name,d.post post from deal_record dr
+        left join employee d on (d.id=dr.deal_id)
+        where dr.claim_voucher_id=#{claimVoucherId} order by deal_time
     </select>
 
 </mapper>

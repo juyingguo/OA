@@ -46,6 +46,3 @@ nbdist/
 !*/build/*.java
 !*/build/*.html
 !*/build/*.xml
-/.idea
-/*.iml
-/oa_web/target
