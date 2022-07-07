@@ -48,3 +48,4 @@ nbdist/
 !*/build/*.xml
 /.idea
 /*.iml
+/oa_web/target
